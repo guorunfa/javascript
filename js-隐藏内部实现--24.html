@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+</head>
+<body>
+<script>
+  function doSomething(a) {
+    // b=a+doSomethingElse(a*2);
+//    console.log(b * 3);
+    console.log("something1 a = " + doSomethingElse(a));
+    console.log("something2 a = " + a);
+    console.log(doSomethingElse(a*2));
+  }
+  function doSomethingElse(a) {
+    console.log("else a = " + a);
+
+    return a-1;
+  }
+  var b;
+  doSomething(2);  //2  1  2   4  3
+
+</script>
+</body>
+</html>

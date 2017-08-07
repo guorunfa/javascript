@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+</head>
+<body>
+<script>
+   /*
+   解决办法:将一个参数命名为undefined,但是在对应的位置不传任何值,
+   这样可以保证在代码模块中undefined标识符就是undefined.
+   */
+   undefined=true;  //给其他代码挖了一个坑,不要这么做.
+   (function IIFE(undefined) {
+     var a;
+     if(a===undefined){
+       console.log("undefined is safe here!");
+     }
+   })();
+</script>
+</body>
+</html>
